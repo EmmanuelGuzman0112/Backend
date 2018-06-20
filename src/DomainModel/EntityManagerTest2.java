@@ -100,6 +100,7 @@ public class EntityManagerTest2
 	}
 }
 
+//COMENTARIOS ADICCIONALES
 //Belongs to dueño de la relacion de que lado voy a actualizar la relacion
 //spring security de grails
 
