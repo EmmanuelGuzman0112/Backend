@@ -100,9 +100,6 @@ public class EntityManagerTest2
 	}
 }
 
-//Belongs to dueño de la relacion de que lado voy a actualizar la relacion
-
-
 
 //COSAS A MEJORAR en BACKEND:
 
