@@ -1,10 +1,12 @@
-package DomainModel;
+package DAO;
 
 import java.util.List;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
+
+import DomainModel.Notificacion;
 
 public class NotificacionDAO
 {
@@ -22,18 +24,6 @@ public class NotificacionDAO
 		entityManager.persist(n);
         entityManager.getTransaction().commit();
         entityManager.close();
-	}
-
-	public List<Notificacion> getNotificaciones()
-	{
-		EntityManager entityManager = entityManagerFactory.createEntityManager();
-		entityManager.getTransaction().begin();
-		List<Notificacion> notificaciones = entityManager.createQuery( "from Notificacion", Notificacion.class ).getResultList();
-
-        entityManager.getTransaction().commit();
-        entityManager.close();
-        
-        return notificaciones;
 	}
 	
 	public List<Notificacion> getNotificacion(Long idPostulacion, Long idBusqueda)

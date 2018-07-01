@@ -2,33 +2,22 @@ package Service;
 
 import java.util.List;
 
+import DAO.BusquedaDAO;
+import DAO.NotificacionDAO;
+import DAO.PostulacionDAO;
 import DomainModel.Busqueda;
-import DomainModel.BusquedaDAO;
 import DomainModel.Notificacion;
-import DomainModel.NotificacionDAO;
 import DomainModel.Postulacion;
-import DomainModel.PostulacionDAO;
 
 public class MacheoService
 {
-	public static void main(String[] args)
+	public void ejecutarMacheo()
 	{
 		PostulacionDAO postulacionDAO = new PostulacionDAO();
 		BusquedaDAO busquedaDAO = new BusquedaDAO();
 		NotificacionDAO notificacionDAO = new NotificacionDAO();
 		
-		Postulacion p1 = new Postulacion("Rock","Guitarra");
-		Postulacion p2 = new Postulacion("Rock","Guitarra");
-		postulacionDAO.savePostulacion(p1);
-		postulacionDAO.savePostulacion(p2);
-		
 		List<Postulacion> postulaciones = postulacionDAO.getPostulaciones();
-		
-		Busqueda b1 = new Busqueda("Guitarra","4 años","2019/04/01");
-		Busqueda b2 = new Busqueda("Bateria","2 años","2019/06/01");
-		busquedaDAO.saveBusqueda(b1);
-		busquedaDAO.saveBusqueda(b2);
-		
 		List<Busqueda> busquedas = busquedaDAO.getBusquedas();
 
 		//RECORRO TODAS LAS POSTULACIONES
