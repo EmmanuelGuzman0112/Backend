@@ -37,9 +37,4 @@ public class BusquedaDAO
         
         return busquedas;
 	}
-	
-	/*public void close()
-	{
-		entityManager.close();
-	}*/
 }

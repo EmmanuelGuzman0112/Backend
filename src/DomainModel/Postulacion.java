@@ -19,8 +19,6 @@ public class Postulacion
 	private String generoMusical;
 	private String instrumento;
 	
-	//id de musico?
-	
 	//Relacion bidireccional
 	@OneToMany(mappedBy = "postulacion", cascade = CascadeType.ALL, orphanRemoval = true)
 	private List<Notificacion> Notificaciones = new ArrayList<Notificacion>();

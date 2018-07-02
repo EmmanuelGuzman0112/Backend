@@ -20,8 +20,6 @@ public class Busqueda
 	private String experiencia;
 	private String fechaExp;
 	
-	//id de banda?
-	
 	//Relacion bidireccional
 	@OneToMany(mappedBy = "busqueda", cascade = CascadeType.ALL, orphanRemoval = true)
 	private List<Notificacion> Notificaciones = new ArrayList<Notificacion>();

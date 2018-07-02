@@ -11,7 +11,7 @@ import DomainModel.Postulacion;
 
 public class MacheoService
 {
-	public void ejecutarMacheo()
+	public static void ejecutarMacheo()
 	{
 		PostulacionDAO postulacionDAO = new PostulacionDAO();
 		BusquedaDAO busquedaDAO = new BusquedaDAO();
